@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title>{{name_site}}</title>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<header>
+		<h1><a href="/">{{name_site}}</a></h1>
+	</header>
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+	<footer>
+		<a href="{{ copyright_url }}">{{ copyright_text }}</a>
+	</footer>
+</body>
+</html>

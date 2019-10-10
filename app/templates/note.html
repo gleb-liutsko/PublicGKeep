@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+	<h3 class="note_title">{{ note_title }}</h3>
+	<div class="note_text">{{ note_text|safe }}</div>
+	{% if img_links %}
+		<div class="title_attached_images"><b>Прикрепленые изображения</b></div>
+		<div class="attached_images">
+			{% for link in img_links %}
+			<img src="{{ link }}">
+			{% endfor %}
+		</div>
+	{% endif %}
+{% endblock %}
