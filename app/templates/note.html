@@ -6,7 +6,7 @@
 		<div class="title_attached_images"><b>Прикрепленые изображения</b></div>
 		<div class="attached_images">
 			{% for link in img_links %}
-			<img src="{{ link }}">
+			<a href="{{ link }}" target="_blank"><img src="{{ link }}"></a>
 			{% endfor %}
 		</div>
 	{% endif %}
