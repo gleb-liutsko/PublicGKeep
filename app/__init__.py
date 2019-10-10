@@ -1,9 +1,9 @@
+import os
 from flask import Flask
 from . import config
-import gkeepapi
 
-keep = gkeepapi.Keep()
-keep.login(config.GOOGLE_LOGIN, config.GOOGLE_PASSWORD)
+if not os.path.isdir('tmp'):
+	os.mkdir('tmp')
 
 app = Flask(__name__)
 from . import views

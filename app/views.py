@@ -1,10 +1,15 @@
-from . import app, keep
+from . import app
 from . import config
+from . import function
 from flask import render_template
+import json
+import gkeepapi
+import os
 
 @app.route('/')
 def index():
-	keep.sync()
+	keep = function.get_gkeep()
+
 	notes = []
 	for i in keep.find(labels=[keep.findLabel(config.TAG_PUBLIC)], archived=False):
 		notes.append({
@@ -22,9 +27,9 @@ def index():
 
 @app.route('/note/<string:id_note>/')
 def note(id_note):
-	keep.sync()
-	note = keep.get(id_note)
+	keep = function.get_gkeep()
 
+	note = keep.get(id_note)
 	img_links = []
 	if len(note.blobs) > 0:
 		for i in note.blobs:

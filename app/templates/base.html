@@ -2,7 +2,11 @@
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
-	<title>{{name_site}}</title>
+	{% if note_title %}
+		<title>{{note_title}} - {{name_site}}</title>
+	{% else %}
+		<title>{{name_site}}</title>
+	{% endif %}
 
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
 	<meta name="viewport" content="width=device-width">
