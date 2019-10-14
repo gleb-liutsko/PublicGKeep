@@ -34,7 +34,7 @@ def note(id_note):
 	if len(note.blobs) > 0:
 		for i in note.blobs:
 			if str(note.blobs[0].blob.type) == 'BlobType.Image':
-				img_links.append(keep.getMediaLink(i)[:-2])
+				img_links.append(keep.getMediaLink(i))
 	print(type(img_links))
 	return render_template(
 		'note.html',
