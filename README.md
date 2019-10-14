@@ -32,3 +32,15 @@ python get_token.py
 cp config.simple.py config.py
 nano config.py
 ```
+
+## Скриншоты
+### Телефон
+![Главная Страница](https://github.com/gleb-liutsko/PublicGKeep/blob/master/img/Mobile/main_page.jpg)
+
+---
+![Заметка](https://github.com/gleb-liutsko/PublicGKeep/blob/master/img/Mobile/note_page.jpg)
+### Десктоп
+![Главная Страница](https://github.com/gleb-liutsko/PublicGKeep/blob/master/img/Desktop/main_page.png)
+
+---
+![Заметка](https://github.com/gleb-liutsko/PublicGKeep/blob/master/img/Desktop/note_page.png)
