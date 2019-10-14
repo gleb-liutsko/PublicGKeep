@@ -1,5 +1,5 @@
+from config import ConfigSite, ConfigGKeep
 from . import app
-from . import config
 from . import function
 from flask import render_template
 import json
@@ -11,7 +11,7 @@ def index():
 	keep = function.get_gkeep()
 
 	notes = []
-	for i in keep.find(labels=[keep.findLabel(config.TAG_PUBLIC)], archived=False):
+	for i in keep.find(labels=[keep.findLabel(ConfigGKeep.TAG_PUBLIC)], archived=False):
 		notes.append({
 			'title': i.title,
 			'id': i.id
@@ -19,9 +19,9 @@ def index():
 
 	return render_template(
 		'index.html',
-		name_site=config.NAME_SITE,
-		copyright_text=config.COPYRIGHT_TEXT,
-		copyright_url=config.COPYRIGHT_URL,
+		name_site=ConfigSite.NAME,
+		copyright_text=ConfigSite.COPYRIGHT_TEXT,
+		copyright_url=ConfigSite.COPYRIGHT_URL,
 		notes=notes
 	)
 
@@ -38,9 +38,9 @@ def note(id_note):
 	print(type(img_links))
 	return render_template(
 		'note.html',
-		name_site=config.NAME_SITE,
-		copyright_text=config.COPYRIGHT_TEXT,
-		copyright_url=config.COPYRIGHT_URL,
+		name_site=ConfigSite.NAME,
+		copyright_text=ConfigSite.COPYRIGHT_TEXT,
+		copyright_url=ConfigSite.COPYRIGHT_URL,
 		note_title=note.title,
 		note_text=note.text.replace('\n', '<br>'),
 		img_links=img_links
