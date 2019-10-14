@@ -3,11 +3,11 @@ class ConfigFlask:
 
 class ConfigGKeep:
 	EMAIL = ''
-	TOKEN = ''
+	TOKEN = '' # Выполните python "get_token.py" для потучения
 	TAG_PUBLIC = 'Public'
 	PATH_TO_FILE = './tmp/gkeep.bac'
 
 class ConfigSite:
-	NAME = 'Public GKeep'
+	NAME = 'Public GKeep' # Указывается в <title>
 	COPYRIGHT_TEXT = '(c) Gleb Liutsko'
 	COPYRIGHT_URL = 'https://liutsko.site/'
