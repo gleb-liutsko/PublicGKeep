@@ -32,6 +32,7 @@ python get_token.py
 cp config.simple.py config.py
 nano config.py
 ```
+8. Настраиваем Web-Сервер и wsgi
 
 ## Скриншоты
 ### Телефон
